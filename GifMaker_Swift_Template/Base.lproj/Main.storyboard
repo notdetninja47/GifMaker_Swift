@@ -157,7 +157,7 @@
         <!--Add a Caption-->
         <scene sceneID="7IM-YL-IPR">
             <objects>
-                <viewController storyboardIdentifier="GifEditorViewController" title="Add a Caption" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gN0-HT-VRx" customClass="GifEditorViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GifEditorViewController" title="Add a Caption" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gN0-HT-VRx" customClass="GifEditorViewController" customModule="GifMaker_Swift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SRd-cZ-f0f"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ay-xf-bgi"/>
@@ -166,7 +166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-S9-dYE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="GifEditorViewContoller" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-S9-dYE">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Idg-S9-dYE" secondAttribute="height" multiplier="1:1" id="VYW-pa-uQv"/>
                                 </constraints>
@@ -196,6 +196,10 @@
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="Hx5-Iw-gBr" id="vnv-Xb-gCa"/>
+                        <outlet property="gifImageView" destination="Idg-S9-dYE" id="jw0-JY-nRp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSQ-pK-rKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="1215" y="66"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="MO7-ys-2QJ">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXC-Xw-CZL" customClass="MainViewController" customModule="GifMaker_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXC-Xw-CZL" customClass="WelcomeViewController" customModule="GifMaker_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FzV-E8-2I8"/>
                         <viewControllerLayoutGuide type="bottom" id="IJD-un-28D"/>
@@ -446,6 +450,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GOk-gI-dlu"/>
                     <connections>
+                        <outlet property="gifImageView" destination="Wun-5B-Ruk" id="wpT-sQ-ixn"/>
                         <segue destination="gN0-HT-VRx" kind="show" identifier="showGifEditor" id="wkV-9i-gKS"/>
                     </connections>
                 </viewController>
